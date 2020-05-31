@@ -9,6 +9,9 @@ int karatsuba(int x, int y);
 
 int main() {
     cout << "7*6 = " << karatsuba(7, 6) << endl;
+    cout << "3*3 = " << karatsuba(3, 3) << endl;
+    cout << "8*2 = " << karatsuba(8, 2) << endl;
+    cout << "100*20 = " << karatsuba(100, 20) << endl;
     cout << "15*15 = " << karatsuba(15, 15) << endl;
     cout << "6*13 = " << karatsuba(6, 13) << endl;
     cout << "51*49 = " << karatsuba(51, 49) << endl;

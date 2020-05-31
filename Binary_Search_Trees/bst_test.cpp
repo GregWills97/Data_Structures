@@ -30,5 +30,12 @@ int main()
    } else {
        cout << ele << " : " << val << endl;
    }
+   ele = 7;
+   val = t.find(ele);
+   if (val == "" ) {
+       cout << ele << " does not exist in tree" << endl;
+   } else {
+       cout << ele << " : " << val << endl;
+   }
     return 0;
 }
