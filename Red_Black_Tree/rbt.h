@@ -28,7 +28,6 @@ class Node{
 class Iterator{
     public:
         Iterator();
-        ~Iterator();
         int getKey() const;
         string getVal() const;
         void next();
@@ -50,6 +49,7 @@ class Map{
         void print2D() const;
         int height() const;
         int max() const;
+        int min() const;
         int size() const;
         string find(int key) const;
         Iterator begin();
@@ -57,6 +57,8 @@ class Map{
     private:
         Node* root;
         int  m_size;
+        int  m_max;
+        int  m_min;
         int  heightHelper(Node* n) const;
         void clearHelper(Node* root);
         void insertHelper(Node* parent, Node* new_node);

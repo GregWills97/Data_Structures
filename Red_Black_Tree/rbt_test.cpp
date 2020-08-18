@@ -17,6 +17,12 @@ int main(){
     mymap.insert(9, "Fluorine");
     Iterator it = mymap.begin();
     it.next();
+    it.next();
+    it.next();
+    it.next();
+    it.prev();
+    cout << mymap.min() << " " << mymap.max() << endl;
+    //cout << it.getKey() << " : " << it.getVal() << endl;
     mymap.clear();
     return 0;
 }

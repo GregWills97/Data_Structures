@@ -34,11 +34,6 @@ Node* Node::mostRight() {
 Iterator::Iterator(){
     position  = nullptr;
     container = nullptr;
-    cout << "Iterator Created" << endl;
-}
-
-Iterator::~Iterator(){
-    cout << "Iterator Destroyed" << endl;
 }
 
 Map::Map(){
@@ -63,8 +58,16 @@ void Map::insert(int key, string val){
     if (root == nullptr) {
         new_node->isBlack = true;
         root = new_node;
+        m_max = key;
+        m_min = key;
     } else {
         insertHelper(root, new_node);
+        if (key > m_max) {
+            m_max = key;
+        }
+        if (key < m_min) {
+            m_min = key;
+        }
     }
     m_size++;
 }
@@ -275,11 +278,11 @@ int Map::heightHelper(Node* n) const{
 }
 
 int Map::max() const {
-    Node* current_node = root;
-    while(current_node->right != nullptr){
-        current_node = current_node->right;
-    }
-    return current_node->key;
+    return m_max;
+}
+
+int Map::min() const {
+    return m_min;
 }
 
 void Map::printLevelOrder() const {
